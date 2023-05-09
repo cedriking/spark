@@ -1,0 +1,47 @@
+{
+  "name": "spark",
+  "version": "1.0.0",
+  "description": "Spark is an auto-gpt alternative that uses LocalAI.",
+  "main": "src/main.ts",
+  "scripts": {
+    "build": "npm run del && npm run format && npm run compile && npm run lint",
+    "compile": "tsc",
+    "del": "rimraf dist",
+    "format": "npm run prettier -- --write .",
+    "format:check": "npm run prettier -- --check .",
+    "lint": "eslint src --max-warnings=0",
+    "prettier": "prettier --ignore-path .gitignore",
+    "dev": "ts-node -r dotenv/config src/main.ts",
+    "start": "node dist/main.js"
+  },
+  "keywords": [],
+  "author": "Cedriking",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/postlight__mercury-parser": "^2.2.4",
+    "@types/ws": "^8.5.4",
+    "@typescript-eslint/eslint-plugin": "^5.57.1",
+    "@typescript-eslint/parser": "^5.57.1",
+    "eslint": "^8.37.0",
+    "rimraf": "^5.0.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.2"
+  },
+  "dependencies": {
+    "@types/jest": "^29.5.0",
+    "@types/lodash": "^4.14.191",
+    "@types/node": "^18.15.3",
+    "@types/turndown": "^5.0.1",
+    "dotenv": "^16.0.3",
+    "googleapis": "^114.0.0",
+    "gpt-3-encoder": "^1.1.4",
+    "lodash": "^4.17.21",
+    "prettier": "^2.8.7",
+    "puppeteer": "^19.8.5",
+    "redis": "^4.6.5",
+    "ts-jest": "^29.0.5",
+    "turndown": "^7.1.2",
+    "undici": "^5.22.0",
+    "ws": "^8.13.0"
+  }
+}
